@@ -89,6 +89,25 @@
     border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
   
+  .footer-social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    
+  }
+  
+  .footer-social-icon {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    margin-right: 1rem;
+  }
+  
+  .footer-social-icon:hover {
+    color: #DCAB0F;
+    transform: translateY(-3px);
+  }
+  
   @media (max-width: 768px) {
     .footer-content {
       flex-direction: column;
