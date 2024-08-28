@@ -1,8 +1,8 @@
 .hero-section {
-  background-image: url('https://www.escortedmoroccotours.com/_next/image?url=%2Fimages%2Fhero-bgs%2Fmain-hero.jpg&w=1920&q=75');
+  background-image: url('/images/2b07012ee3.jpg');
   background-size: cover;
   background-position: center;
-  min-height: 90vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   padding: 2rem 5%;

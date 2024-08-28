@@ -1,19 +1,20 @@
+import React from 'react';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
 import FeaturedSection from '../components/FeaturedSection';
-import DestinationSection from '../components/DestinationSection';
-import TourGuideSection from '../components/TourGuideSection';
+import InfiniteSlider from '../components/InfiniteSlider';
 import Footer from '../components/Footer';
+import WhatsAppButton from '../components/WhatsAppButton';
 
 export default function Home() {
   return (
-    <>
+    <main>
       <Navbar />
       <HeroSection />
       <FeaturedSection />
-      <DestinationSection />
-      <TourGuideSection />
+      <InfiniteSlider />
       <Footer />
-    </>
+      <WhatsAppButton />
+    </main>
   );
 }
