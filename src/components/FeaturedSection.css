@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
+
+.featured-section {
+  padding: 3rem 0;
+  background-color: #f8f8f8;
+}
+
+.featured-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.perfect-for-you {
+  font-family: 'Satisfy', cursive;
+  font-size: 22px;
+  color: #DCAB0F;
+  margin-bottom: 0.5rem;
+}
+
+.choose-package {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 45px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.featured-description {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #000;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.tour-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tour-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.tour-card:hover {
+  transform: translateY(-5px);
+}
+
+.tour-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.tour-card h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 23px;
+  font-weight: 900; /* Increased from 700 to 900 for extra boldness */
+  color: #454545;
+  margin: 0.5rem 0; /* Removed left margin, adjusted top and bottom */
+  text-align: left; /* Align text to the left */
+}
+
+.tour-card button {
+  display: block;
+  width: calc(100% - 2rem);
+  margin: 1rem;
+  padding: 0.75rem;
+  background-color: #DCAB0F;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tour-card button:hover {
+  background-color: #ceb460;
+}
+
+.tour-info {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #6E6E6E;
+  margin-bottom: 1rem;
+  margin-left: -5px; /* Add this line to move the icon and text to the left */
+}
+
+.location-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 0.5rem;
+  flex-shrink: 0; /* Add this to prevent the icon from shrinking */
+}
+
+.book-now {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #DCAB0F;
+  background-color: transparent;
+  border: 2px solid #DCAB0F;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.book-now:hover {
+  background-color: #DCAB0F;
+  color: white;
+}
+
+.navbar a {
+  color: #162B32;
+  font-size: 21px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #DCAB0F;
+}
+
+/* Remove any existing hover effects on the navbar buttons */
+.navbar button:hover {
+  color: #DCAB0F;
+  background: none;
+  border-color: transparent;
+}
+
+@media (max-width: 1024px) {
+  .tour-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .perfect-for-you {
+    font-size: 20px;
+  }
+
+  .choose-package {
+    font-size: 35px;
+  }
+
+  .featured-description {
+    font-size: 14px;
+  }
+
+  .tour-grid {
+    grid-template-columns: 1fr; /* Change to single column for mobile */
+    gap: 1.5rem;
+  }
+
+  .tour-card h4 {
+    font-size: 1.1rem;
+  }
+
+  .tour-card button {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .navbar a {
+    font-size: 16px; /* Reduced font size for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .perfect-for-you {
+    font-size: 18px;
+  }
+
+  .choose-package {
+    font-size: 28px;
+  }
+
+  .featured-description {
+    font-size: 13px;
+  }
+
+  .tour-grid {
+    gap: 1.5rem; /* Adjust gap for smaller screens if needed */
+  }
+
+  .tour-card h4 {
+    font-size: 1rem;
+  }
+
+  .tour-card button {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .navbar a {
+    font-size: 14px; /* Further reduced font size for smaller mobile devices */
+  }
+}

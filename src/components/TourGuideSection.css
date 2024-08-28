@@ -1,0 +1,140 @@
+.tour-guide-section {
+  padding: 4rem 0;
+  background-color: #f8f8f8;
+}
+
+.tour-guide-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 45px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.section-description {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #000;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.guide-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  background-color: white;
+  cursor: pointer; /* Add this line to change the cursor to a pointer */
+}
+
+.guide-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.guide-image {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.guide-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.guide-overlay h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.guide-overlay p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  margin: 0;
+}
+
+.social-icons {
+  position: absolute;
+  right: 10px;
+  top: calc(50% - 40px); /* Move 40px up from the center */
+  display: flex;
+  flex-direction: column;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  transform: translateY(-50%);
+}
+
+.guide-card:hover .social-icons {
+  opacity: 1;
+}
+
+.social-icon {
+  width: 35px; /* Increased from 30px */
+  height: 35px; /* Increased from 30px */
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #333;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  font-size: 16px; /* Add this line to set the icon size */
+}
+
+@media (max-width: 1024px) {
+  .guide-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 35px;
+  }
+
+  .section-description {
+    font-size: 14px;
+  }
+
+  .guide-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 28px;
+  }
+
+  .section-description {
+    font-size: 13px;
+  }
+}
