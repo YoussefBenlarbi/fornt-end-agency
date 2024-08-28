@@ -5,6 +5,7 @@ import FeaturedSection from '../components/FeaturedSection';
 import InfiniteSlider from '../components/InfiniteSlider';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
+import DestinationSection from '../components/DestinationSection';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <FeaturedSection />
+      <DestinationSection />
       <InfiniteSlider />
       <Footer />
       <WhatsAppButton />
