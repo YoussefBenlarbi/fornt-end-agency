@@ -57,6 +57,7 @@
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin-left: auto; /* Add this line to move the button to the right */
 }
 
 .play-button:hover {
@@ -118,6 +119,7 @@
   .play-button {
     width: 60px;
     height: 60px;
+    margin-left: 0; /* Reset margin for mobile view */
   }
 
   .play-button svg {

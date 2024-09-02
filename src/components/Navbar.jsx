@@ -16,10 +16,10 @@ const Navbar = () => {
       <div className="navbar-container">
         <div className="logo">Moroccan experience tours</div>
         <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-          <Link href="/" onClick={toggleMenu}>Home</Link>
-          <Link href="/about" onClick={toggleMenu}>About</Link>
-          <Link href="/services" onClick={toggleMenu}>Services</Link>
-          <Link href="/contact" onClick={toggleMenu}>Contact</Link>
+          <Link href="/" onClick={toggleMenu}>HOME</Link>
+          <Link href="/about" onClick={toggleMenu}>ABOUT</Link>
+          <Link href="/services" onClick={toggleMenu}>SERVICES</Link>
+          <Link href="/contact" onClick={toggleMenu}>CONTACT</Link>
         </div>
         <div className="hamburger" onClick={toggleMenu}>
           <span></span>
