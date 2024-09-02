@@ -2,7 +2,7 @@
   background-image: url('/images/2b07012ee3.jpg');
   background-size: cover;
   background-position: center;
-  min-height: 80vh;
+  min-height: 90vh; /* Increased from 80vh to 90vh */
   display: flex;
   align-items: center;
   padding: 2rem 5%;
@@ -52,12 +52,19 @@
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
   color: white;
-  width: 80px;
-  height: 80px;
+  width: 100px; /* Increased from 80px to 100px */
+  height: 100px; /* Increased from 80px to 100px */
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-left: auto; /* Add this line to move the button to the right */
+  margin-left: auto;
+  margin-right: 20%; /* Add margin-right for desktop layout */
+}
+
+@media (max-width: 768px) {
+  .play-button {
+    margin-right: 0; /* Remove margin-right for mobile layout */
+  }
 }
 
 .play-button:hover {
@@ -66,8 +73,8 @@
 }
 
 .play-button svg {
-  width: 40px;
-  height: 40px;
+  width: 50px; /* Increased from 40px to 50px */
+  height: 50px; /* Increased from 40px to 50px */
 }
 
 .video-overlay {
@@ -117,14 +124,14 @@
   }
 
   .play-button {
-    width: 60px;
-    height: 60px;
+    width: 80px; /* Increased from 60px to 80px */
+    height: 80px; /* Increased from 60px to 80px */
     margin-left: 0; /* Reset margin for mobile view */
   }
 
   .play-button svg {
-    width: 30px;
-    height: 30px;
+    width: 40px; /* Increased from 30px to 40px */
+    height: 40px; /* Increased from 30px to 40px */
   }
 }
 
@@ -134,12 +141,12 @@
   }
 
   .play-button {
-    width: 50px;
-    height: 50px;
+    width: 70px; /* Increased from 50px to 70px */
+    height: 70px; /* Increased from 50px to 70px */
   }
 
   .play-button svg {
-    width: 25px;
-    height: 25px;
+    width: 35px; /* Increased from 25px to 35px */
+    height: 35px; /* Increased from 25px to 35px */
   }
 }
