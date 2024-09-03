@@ -42,7 +42,7 @@
   
   .cta-button {
     display: inline-block;
-    background-color: #25D366;
+    background-color: #DCAB0F;
     color: white;
     padding: 1rem 2rem;
     font-size: 1.2rem;
@@ -52,12 +52,12 @@
   }
   
   .cta-button:hover {
-    background-color: #128C7E;
+    background-color: #bca24c;
   }
   
   @media (max-width: 768px) {
     .cta-content h2 {
-      font-size: 2rem;
+      font-size: 1.8rem; /* Reduced font size for mobile */
     }
   
     .cta-content p {
@@ -68,4 +68,12 @@
       font-size: 1rem;
       padding: 0.8rem 1.6rem;
     }
+  }
+  
+  @media (max-width: 480px) {
+    .cta-content h2 {
+      font-size: 1.5rem; /* Further reduced font size for smaller mobile devices */
+    }
+  
+    /* ... other existing small mobile styles ... */
   }

@@ -17,7 +17,7 @@ const HeroSection = () => {
           <h1 style={{ fontWeight: 'bold', textShadow: '2px 1px 3px #DCAB0F' }}>Discover Morocco </h1>
           {/* <p><strong style={{ color: '#DCAB0F', fontSize: '1.2em' }}>Best Moroccan Eperiences ,Guided Tours</strong></p> */}
           {/* <p>Get the best Out of your vacation in Morocco with our guided tours. Join Our Exciting Escorted Immersion Tours and Uncover the Best of Morocco.</p> */}
-          <p><strong style={{ color: '#DCAB0F', fontSize: '1.2em', textShadow: '1px 1px 2px rgba(255, 255, 255, 0.5)' }}>Best Moroccan Experiences, Guided Tours</strong></p>
+          <p><strong style={{ color: '#DCAB0F', fontSize: '1.4em', textShadow: '1px 1px 2px rgba(255, 255, 255, 0.8)' }}>Best Moroccan Experiences, Guided Tours</strong></p>
           <p>Get the best Out of your vacation in Morocco with our guided tours. Join Our Exciting Escorted Immersion Tours and Uncover the Best of Morocco.</p>
         </div>
         <button

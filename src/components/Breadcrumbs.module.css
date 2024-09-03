@@ -1,0 +1,41 @@
+.breadcrumbs {
+  background-image: url('/images/breadcrumb-bg.png');
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  margin-bottom: 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+}
+
+.breadcrumbsTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.breadcrumbsLinks {
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.breadcrumbsLinks a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.breadcrumbsLinks a:hover {
+  text-decoration: underline;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+import DestinationCard from './DestinationCard';
 import './DestinationSection.css';
 
 const DestinationSection = () => {
@@ -22,23 +22,12 @@ const DestinationSection = () => {
         </p>
         <div className="destination-grid">
           {destinations.map((destination) => (
-            <div key={destination.id} className="destination-card">
-              <div className="destination-image">
-                <Image 
-                  src={destination.image} 
-                  alt={destination.name}
-                  layout="fill"
-                  objectFit="cover"
-                />
-                <div className="destination-overlay">
-                  <h3>{destination.name}</h3>
-                  <div className="tour-count">
-                    <div className="separator"></div>
-                    <span>{destination.tours} tours</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <DestinationCard
+              key={destination.id}
+              name={destination.name}
+              image={destination.image}
+              tours={destination.tours}
+            />
           ))}
         </div>
       </div>

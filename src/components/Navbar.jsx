@@ -17,7 +17,7 @@ const Navbar = () => {
         <div className="logo">Moroccan experience tours</div>
         <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
           <Link href="/" onClick={toggleMenu}>HOME</Link>
-          <Link href="/about" onClick={toggleMenu}>ABOUT</Link>
+          <Link href="/destinations" onClick={toggleMenu}>DESTINATIONS</Link>
           <Link href="/services" onClick={toggleMenu}>SERVICES</Link>
           <Link href="/contact" onClick={toggleMenu}>CONTACT</Link>
         </div>
