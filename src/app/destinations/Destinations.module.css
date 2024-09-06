@@ -52,3 +52,213 @@
   .breadcrumbsLinks a:hover {
     text-decoration: underline;
   }
+  
+  .pageLayout {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .mainContent {
+    flex: 1;
+  }
+
+  .sidebar {
+    width: 300px;
+    flex-shrink: 0;
+    background-color: #EEEEEE;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .searchInput {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .tourList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .tourItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+  }
+
+  .tourItem:last-child {
+    border-bottom: none;
+  }
+
+  .tourItem:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+  }
+
+  .tourImage {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+  .tourInfo h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: #000;
+    font-weight: 600;
+  }
+  .listTitre {
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-style: italic;
+    /* text-decoration: underline; */
+  }
+  .tourInfo p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #666;
+    
+  }
+
+  /* Media query for tablets and mobile devices */
+  @media (max-width: 768px) {
+    .pageLayout {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .sidebar {
+      width: 100%;
+      margin-top: 1rem;
+      border-radius: 0;
+    }
+
+    .grid {
+      gap: 1rem;
+    }
+
+    .mainContent, .sidebar {
+      margin-left: -2rem;
+      margin-right: -2rem;
+      width: auto;
+    }
+  }
+
+  .destinationList {
+    margin-top: 20px;
+  }
+
+  .destinationItem {
+    padding: 10px;
+    cursor: pointer;
+    color: #000;
+    font-size: 0.8em;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+  }
+
+  .destinationItem:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .destinationItem h3 {
+    margin: 0;
+    font-size: 1.1em;
+  }
+
+  .destinationItem p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    color: #666;
+  }
+
+  .destinationSeparator {
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+    margin: 5px 0;
+  }
+
+  .destinationName {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8em;
+  }
+
+  .destinationNumber {
+    margin-left: auto;
+    font-size: 0.8em;
+  }
+
+  .skeleton {
+    animation: skeleton-loading 1s linear infinite alternate;
+  }
+
+  @keyframes skeleton-loading {
+    0% {
+      background-color: hsl(200, 20%, 80%);
+    }
+    100% {
+      background-color: hsl(200, 20%, 95%);
+    }
+  }
+
+  .skeletonImage {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 1rem;
+  }
+
+  .skeletonContent {
+    padding: 1rem;
+  }
+
+  .skeletonTitle {
+    height: 2rem;
+    margin-bottom: 0.5rem;
+    width: 70%;
+  }
+
+  .skeletonDescription {
+    height: 4rem;
+  }
+
+  .skeletonTourImage {
+    width: 100px;
+    height: 100px;
+    margin-right: 1rem;
+  }
+
+  .skeletonTourInfo {
+    flex: 1;
+  }
+
+  .skeletonTourTitle {
+    height: 1.5rem;
+    width: 70%;
+    margin-bottom: 0.5rem;
+  }
+
+  .skeletonTourDuration {
+    height: 1rem;
+    width: 40%;
+  }
+
+  .skeletonDestinationName {
+    height: 1.5rem;
+    width: 80%;
+  }

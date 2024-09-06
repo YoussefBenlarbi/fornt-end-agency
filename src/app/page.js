@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
-      <InformationSection />
       <FeaturedSection />
+      <InformationSection />
       <DestinationSection />
       <TourGuideSection />
       <CTASection />
