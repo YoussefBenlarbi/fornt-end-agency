@@ -11,7 +11,7 @@ const TourList = ({ isLoading, tours, searchTerm }) => (
     ) : (
       tours
         .filter(tour => 
-          tour.title.toLowerCase().includes(searchTerm.toLowerCase())
+          tour && tour.title && tour.title.toLowerCase().includes(searchTerm.toLowerCase())
         )
         .map((tour) => (
           <div key={tour.id} className={styles.tourItem}>

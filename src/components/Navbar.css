@@ -24,13 +24,13 @@
 
 .nav-links {
   display: flex;
-  gap: 30px;
+  gap: 15px; /* Reduced from 30px to 15px */
 }
 
-.nav-links a {
+.nav-links a, .dropbtn {
+  padding: 10px 10px; /* Reduced horizontal padding from 15px to 10px */
   text-decoration: none;
   color: #333;
-  padding: 10px 15px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
   font-weight: 600; /* Changed from 500 to 700 to make links bold */
@@ -111,4 +111,98 @@
     background-color: #f0f0f0;
     color: #DCAB0F;
   }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: transparent;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+  font-size: 14px !important;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.dropbtn:hover {
+  background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .dropbtn {
+    font-size: 14px !important;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 700;
+  }
+
+  .dropbtn:hover {
+    color: #DCAB0F;
+    background-color: transparent;
+  }
+}
+
+@media (max-width: 480px) {
+  .dropbtn {
+    font-size: 12px !important;
+    padding: 6px 10px;
+  }
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content.show {
+  display: flex;
+}
+
+.dropdown-column {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 16px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 13px !important;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.fa-caret-down {
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.fa-caret-down.open {
+  transform: rotate(180deg);
+}
+
+.dropdown-content h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.duration {
+  white-space: nowrap;
 }
