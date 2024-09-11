@@ -1,19 +1,36 @@
 "use client";
-import { Suspense } from 'react';
-import dynamic from 'next/dynamic';
+import Link from 'next/link';
+import styles from './Destinations.module.css';
 
-const DynamicDestinations = dynamic(() => import('./DynamicDestinations').catch(err => {
-  console.error("Error loading DynamicDestinations:", err);
-  return () => <div>Error loading content</div>;
-}), {
-  ssr: false,
-  loading: () => <div>Loading...</div>
-});
+const destinations = [
+  "Ait Ben Haddou",
+  "Ouarzazate",
+  "Fes",
+  "Rabat",
+  "Merzouga",
+  "Boumalne Dades",
+  "Agadir",
+  "Tangier",
+  "Marrakech",
+  "Chefchaouen",
+  "Essaouira",
+  "Casablanca",
+  "Meknes",
+];
 
-export default function Destinations() {
+export default function DestinationsPage() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <DynamicDestinations />
-    </Suspense>
+    <div className={styles.destinationsContainer}>
+      <h1>Destinations</h1>
+      <ul className={styles.destinationList}>
+        {destinations.map((destination) => (
+          <li key={destination}>
+            <Link href={`/destinations/${destination.toLowerCase().replace(' ', '-')}`}>
+              {destination}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

@@ -262,3 +262,107 @@
     height: 1.5rem;
     width: 80%;
   }
+
+  .destinationsContainer {
+    padding: 2rem;
+  }
+
+  .destinationsList {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .destinationsList li {
+    margin-bottom: 0.5rem;
+  }
+
+  .destinationsList a {
+    color: #0070f3;
+    text-decoration: none;
+  }
+
+  .destinationsList a:hover {
+    text-decoration: underline;
+  }
+
+  /* Add these styles if they don't exist */
+  .pageLayout {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .mainContent {
+    flex: 1;
+  }
+
+  /* Adjust the existing .sidebar class if needed */
+  .sidebar {
+    width: 300px;
+    flex-shrink: 0;
+    background-color: #EEEEEE;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  /* Add any additional styles needed for consistency */
+
+
+  .mainContentTitle {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .mainContentDescription {
+    font-size: 1rem;
+  }
+
+  .accordionTitle{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #000;
+    font-style: italic;
+    cursor: pointer;
+    user-select: none;
+    
+
+  }
+  .accordionItem{
+    margin-bottom: 1rem;
+  }
+  .accordionContent{
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #000;
+    padding: 0 1em;
+  }
+  .accordionContainer{
+    margin-top: 1rem;
+  }
+
+  .contentContainer {
+    margin-top: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #000;
+    font-style: italic;
+  }
+
+  .sectionContent {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    color: #000;
+  }
+
+  .destinationImage {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
