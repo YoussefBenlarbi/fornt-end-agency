@@ -55,7 +55,7 @@ const Navbar = () => {
   ];
 
   const tourStarts = [
-    { title: 'Marrakech', route: '/tours/from/marrakech' },
+    { title: 'Marrakech', route: '/tours/marrakech' },
     { title: 'Casablanca', route: '/tours/from/casablanca' },
     { title: 'Fes', route: '/tours/from/fes' },
     { title: 'Tangier', route: '/tours/from/tangier' }

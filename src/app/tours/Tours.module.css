@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
+.container{
+    background-color: #F8F8F8;
+    /* background-color: red; */
+}
+.featuredSection {
+  padding: 3rem 0;
+  background-color: #f8f8f8;
+}
+
+.featuredContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.perfectForYou {
+  font-family: 'Satisfy', cursive;
+  font-size: 22px;
+  color: #DCAB0F;
+  margin-bottom: 0.5rem;
+}
+
+.choosePackage {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 45px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.descSecDescription {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #000;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+/* Add more styles as needed */
+
+@media (max-width: 768px) {
+  .perfectForYou {
+    font-size: 20px;
+  }
+
+  .choosePackage {
+    font-size: 35px;
+  }
+
+  .descSecDescription {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .perfectForYou {
+    font-size: 18px;
+  }
+
+  .choosePackage {
+    font-size: 28px;
+  }
+
+  .descSecDescription {
+    font-size: 13px;
+  }
+}
+
+.toursSection {
+  padding: 3rem 0;
+  background-color: #f8f8f8;
+}
+
+.toursGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.tourCard {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tourCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.tourImageContainer {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.tourImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.tourCard:hover .tourImage {
+  transform: scale(1.05);
+}
+
+.tourDuration {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(220, 171, 15, 0.9);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.tourInfo {
+  padding: 1.5rem;
+}
+
+.tourTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.tourPrice {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #DCAB0F;
+  margin-bottom: 1rem;
+}
+
+.bookNowBtn {
+  display: inline-block;
+  background-color: #DCAB0F;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bookNowBtn:hover {
+  background-color: #c49a0d;
+}
+
+@media (max-width: 768px) {
+  .toursGrid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .toursGrid {
+    grid-template-columns: 1fr;
+  }
+}
