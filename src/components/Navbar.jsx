@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
-import './Navbar.css';
+import React, { useState, useEffect, useRef } from "react";
+import Link from "next/link";
+import "./Navbar.css";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,57 +29,98 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (destinationsDropdownRef.current && !destinationsDropdownRef.current.contains(event.target)) {
+      if (
+        destinationsDropdownRef.current &&
+        !destinationsDropdownRef.current.contains(event.target)
+      ) {
         setIsDestinationsOpen(false);
       }
-      if (toursDropdownRef.current && !toursDropdownRef.current.contains(event.target)) {
+      if (
+        toursDropdownRef.current &&
+        !toursDropdownRef.current.contains(event.target)
+      ) {
         setIsToursOpen(false);
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
   const destinations = [
-    { title: 'Marrakech', route: '/destinations/marrakech' },
-    { title: 'Fes', route: '/destinations/fes' },
-    { title: 'Casablanca', route: '/destinations/casablanca' },
-    { title: 'Chefchaouen', route: '/destinations/chefchaouen' },
-    { title: 'Essaouira', route: '/destinations/essaouira' },
-    { title: 'Merzouga', route: '/destinations/merzouga' },
-    { title: 'Ouarzazate', route: '/destinations/ouarzazate' },
-    { title: 'All destinations', route: '/destinations' }
+    { title: "Marrakech", route: "/destinations/marrakech" },
+    { title: "Fes", route: "/destinations/fes" },
+    { title: "Casablanca", route: "/destinations/casablanca" },
+    { title: "Chefchaouen", route: "/destinations/chefchaouen" },
+    { title: "Essaouira", route: "/destinations/essaouira" },
+    { title: "Merzouga", route: "/destinations/merzouga" },
+    { title: "Ouarzazate", route: "/destinations/ouarzazate" },
+    { title: "All destinations", route: "/destinations" },
   ];
 
   const tourStarts = [
-    { title: 'Marrakech', route: '/tours/marrakech' },
-    { title: 'Casablanca', route: '/tours/from/casablanca' },
-    { title: 'Fes', route: '/tours/from/fes' },
-    { title: 'Tangier', route: '/tours/from/tangier' }
+    { title: "Marrakech", route: "/tours/marrakech" },
+    { title: "Casablanca", route: "/tours/casablanca" },
+    { title: "Fes", route: "/tours/fes" },
+    { title: "Tangier", route: "/tours/tangier" },
   ];
 
   const tourDurations = [
-    { title: '3 Days', route: '/tours/duration/3-days' },
-    { title: '5 Days', route: '/tours/duration/5-days' },
-    { title: '7 Days', route: '/tours/duration/7-days' },
-    { title: 'All Tours', route: '/tours/duration/tours' }
+    { title: "3 Days", route: "/tours/3-days" },
+    { title: "5 Days", route: "/tours/5-days" },
+    { title: "7 Days", route: "/tours/7-days" },
+    { title: "All Tours", route: "/tours/all-tours" },
   ];
 
   return (
     <nav className="navbar">
       <div className="navbar-container">
         <div className="logo">Moroccan experience tours</div>
-        <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-          <Link href="/" onClick={toggleMenu}>HOME</Link>
+        <div className={`nav-links ${isMenuOpen ? "active" : ""}`}>
+          <Link href="/" onClick={toggleMenu}>
+            HOME
+          </Link>
+          
+          <div className="dropdown" ref={toursDropdownRef}>
+            <button className="dropbtn" onClick={toggleTours}>
+              TOURS
+              <i
+                className={`fa fa-caret-down ${isToursOpen ? "open" : ""}`}
+              ></i>
+            </button>
+            <div className={`dropdown-content ${isToursOpen ? "show" : ""}`}>
+              <div className="dropdown-column">
+                <h3 style={{ color: "gray", fontSize: "13px" }}>Starts From</h3>
+                {tourStarts.map((city, index) => (
+                  <Link key={index} href={city.route} onClick={toggleMenu}>
+                    {city.title}
+                  </Link>
+                ))}
+              </div>
+              <div className="dropdown-column">
+                <h3 style={{ color: "gray", fontSize: "13px" }}>Duration</h3>
+                {tourDurations.map((duration, index) => (
+                  <Link key={index} href={duration.route} onClick={toggleMenu}>
+                    <span className="duration">{duration.title}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
           <div className="dropdown" ref={destinationsDropdownRef}>
             <button className="dropbtn" onClick={toggleDestinations}>
               DESTINATIONS
-              <i className={`fa fa-caret-down ${isDestinationsOpen ? 'open' : ''}`}></i>
+              <i
+                className={`fa fa-caret-down ${
+                  isDestinationsOpen ? "open" : ""
+                }`}
+              ></i>
             </button>
-            <div className={`dropdown-content ${isDestinationsOpen ? 'show' : ''}`}>
+            <div
+              className={`dropdown-content ${isDestinationsOpen ? "show" : ""}`}
+            >
               <div className="dropdown-column">
                 {destinations.slice(0, 4).map((dest, index) => (
                   <Link key={index} href={dest.route} onClick={toggleMenu}>
@@ -96,33 +137,15 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <div className="dropdown" ref={toursDropdownRef}>
-            <button className="dropbtn" onClick={toggleTours}>
-              TOURS
-              <i className={`fa fa-caret-down ${isToursOpen ? 'open' : ''}`}></i>
-            </button>
-            <div className={`dropdown-content ${isToursOpen ? 'show' : ''}`}>
-              <div className="dropdown-column">
-                <h3 style={{ color: 'gray', fontSize: '13px'}}>Starts From</h3>
-                {tourStarts.map((city, index) => (
-                  <Link key={index} href={city.route} onClick={toggleMenu}>
-                    {city.title}
-                  </Link>
-                ))}
-              </div>
-              <div className="dropdown-column">
-                <h3 style={{ color: 'gray', fontSize: '13px'}}>Duration</h3>
-                {tourDurations.map((duration, index) => (
-                  <Link key={index} href={duration.route} onClick={toggleMenu}>
-                    <span className="duration">{duration.title}</span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-          <Link href="/about-us" onClick={toggleMenu}>ABOUT US </Link>
-          <Link href="/blog" onClick={toggleMenu}>BLOG</Link>
-          <Link href="/contact-us" onClick={toggleMenu}>CONTACT US</Link>
+          <Link href="/about-us" onClick={toggleMenu}>
+            ABOUT US{" "}
+          </Link>
+          <Link href="/blog" onClick={toggleMenu}>
+            BLOG
+          </Link>
+          <Link href="/contact-us" onClick={toggleMenu}>
+            CONTACT US
+          </Link>
         </div>
         <div className="hamburger" onClick={toggleMenu}>
           <span></span>
