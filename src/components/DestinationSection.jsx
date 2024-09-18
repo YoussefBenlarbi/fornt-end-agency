@@ -4,12 +4,12 @@ import './DestinationSection.css';
 
 const DestinationSection = () => {
   const destinations = [
-    { id: 1, name: 'Marrakech', image: '/images/essaouira.jpeg', tours: 15 },
-    { id: 2, name: 'Fes', image: '/images/essaouira.jpeg', tours: 12 },
-    { id: 3, name: 'Chefchaouen', image: '/images/essaouira.jpeg', tours: 8 },
-    { id: 4, name: 'Sahara Desert', image: '/images/essaouira.jpeg', tours: 10 },
+    { id: 1, name: 'Marrakech', image: '/images/marrakech.jpg', tours: 15 },
+    { id: 2, name: 'Fes', image: '/images/fes.jpg', tours: 12 },
+    { id: 3, name: 'Chefchaouen', image: '/images/chefchaouen.jpg', tours: 8 },
+    { id: 4, name: 'Sahara Desert', image: '/images/Sahara_desert.jpg', tours: 10 },
     { id: 5, name: 'Essaouira', image: '/images/essaouira.jpeg', tours: 10 },
-    { id: 6, name: 'Atlas Mountains', image: '/images/essaouira.jpeg', tours: 9 },
+    { id: 6, name: 'Atlas Mountains', image: '/images/atlas.jpg', tours: 9 },
   ];
 
   return (

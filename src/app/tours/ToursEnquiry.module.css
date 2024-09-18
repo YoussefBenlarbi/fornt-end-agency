@@ -1,0 +1,361 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.mainContent {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.leftColumn {
+  width: 65%;
+}
+
+.rightColumn {
+  width: 30%;
+}
+
+.imageContainer {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.tourImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.tourCard {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(248, 248, 248, 0.9);
+  padding: 20px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.tourType {
+  font-size: 14px;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.tourTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #333;
+}
+
+.tourLocation {
+  display: flex;
+  align-items: center;
+  color: #333;
+}
+
+.tourLocation svg {
+  margin-right: 5px;
+}
+
+.itinerary {
+  margin-top: 30px;
+}
+
+.itinerary h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.enquiryForm {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.enquiryForm h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.enquiryForm input,
+.enquiryForm textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.enquiryForm textarea {
+  height: 100px;
+}
+
+.enquiryForm button {
+  width: 100%;
+  padding: 10px;
+  background-color: #DCAB0F;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.enquiryForm button:hover {
+  background-color: #c49a0d;
+}
+
+.destinationsList {
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.destinationsList h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.destinationsList ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.destinationsList li {
+  margin-bottom: 10px;
+}
+
+.destinationsList a {
+  color: #333;
+  text-decoration: none;
+}
+
+.destinationsList a:hover {
+  color: #DCAB0F;
+}
+
+.destinationItem {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.destinationLink {
+  color: #333;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  padding: 8px 12px;
+  transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.destinationLink:hover {
+  color: #DCAB0F;
+  border-color: #DCAB0F;
+  background-color: rgba(220, 171, 15, 0.05);
+}
+
+.destinationText {
+  position: relative;
+  display: inline-block;
+}
+
+.destinationText::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #DCAB0F;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease;
+}
+
+.destinationLink:hover .destinationText::after {
+  transform: scaleX(1);
+}
+
+/* Update the hover effect */
+@media (hover: hover) {
+  .destinationLink:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Adjust the mobile styles */
+@media (max-width: 768px) {
+  .destinationLink {
+    font-size: 14px;
+    transition: transform 0.2s ease, color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+  }
+
+  .destinationLink:hover {
+    transform: scale(1.02);
+    color: #DCAB0F;
+    border-color: #DCAB0F;
+    background-color: rgba(220, 171, 15, 0.05);
+  }
+}
+
+@media (max-width: 768px) {
+  .tourCard {
+    padding: 10px;
+  }
+
+  .tourType {
+    font-size: 12px;
+  }
+
+  .tourTitle {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+
+  .tourLocation {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tourCard {
+    padding: 8px;
+  }
+
+  .tourType {
+    font-size: 10px;
+  }
+
+  .tourTitle {
+    font-size: 16px;
+    margin: 3px 0;
+  }
+
+  .tourLocation {
+    font-size: 12px;
+  }
+}
+
+.popularTours {
+  margin-top: 2rem;
+  padding: 20px;
+}
+
+.toursList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.tourItem {
+  margin-bottom: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tourLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.tourItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tourImageContainer {
+  width: 150px;
+  height: 100px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.tourItem:hover .tourImageContainer {
+  transform: scale(1.05);
+}
+
+.tourImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.tourItem:hover .tourImage {
+  transform: scale(1.1);
+}
+
+.tourInfo {
+  padding: 0.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tourTitle {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.tourDestination {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+/* .tourItem:hover .tourDestination {
+  color: #DCAB0F;
+} */
+
+.tourDestination svg {
+  margin-right: 0.25rem;
+}
+
+.tourDestination span {
+  margin-left: 0.25rem;
+}
+
+/* Remove or comment out these lines */
+/* .tourDestination a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.tourDestination a:hover {
+  text-decoration: underline;
+} */
+
+.enquiryParagragh{
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 1rem;
+  
+}

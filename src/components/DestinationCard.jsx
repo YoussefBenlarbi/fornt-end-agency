@@ -2,12 +2,12 @@ import React from 'react';
 import Image from 'next/image';
 import styles from './Destination__Card.module.css';
 
-const DestinationCard = ({ name, imageUrl, tours }) => {
+const DestinationCard = ({ name, image, tours }) => {
   return (
     <div className={styles.destinationCard}>
       <div className={styles.destinationImage}>
         <Image 
-          src={`http://127.0.0.1:8000/api/${imageUrl}`} 
+          src={image} 
           alt={name}
           layout="fill"
           objectFit="cover"

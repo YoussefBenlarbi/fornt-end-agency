@@ -1,0 +1,36 @@
+.accordionItem {
+  margin-bottom: 10px;
+}
+
+.accordionTitle {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.accordionTitle:hover {
+  background-color: #e8e8e8;
+}
+
+.icon {
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.accordionTitle[aria-expanded="true"] .icon {
+  transform: rotate(90deg);
+}
+
+.accordionContent {
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+  text-align: justify;
+  
+}
