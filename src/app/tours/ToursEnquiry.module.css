@@ -359,3 +359,30 @@
     margin-bottom: 1rem;
   
 }
+
+.accordionItem {
+  margin-bottom: 10px;
+}
+
+.accordionTitle {
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.accordionContent {
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.icon {
+  margin-right: 10px;
+}

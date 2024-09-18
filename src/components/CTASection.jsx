@@ -2,8 +2,7 @@ import React from 'react';
 import './CTASection.css';
 
 const CTASection = () => {
-    console.log('CTASection is rendering');
-    console.log('CTASection rendered at', new Date().toISOString());
+
   return (
     <section className="cta-section">
       <div className="cta-content">

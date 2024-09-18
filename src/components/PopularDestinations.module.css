@@ -1,0 +1,76 @@
+.destinationsList {
+  margin:1rem;
+}
+
+.title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.destinationItem {
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.destinationLink {
+  color: #333;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  padding: 8px 12px;
+  transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.destinationLink:hover {
+  color: #DCAB0F;
+  border-color: #DCAB0F;
+  background-color: rgba(220, 171, 15, 0.05);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.destinationText {
+  position: relative;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.destinationText::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #DCAB0F;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease;
+}
+
+.destinationLink:hover .destinationText::after {
+  transform: scaleX(1);
+}
+
+/* Adjust the mobile styles */
+@media (max-width: 768px) {
+  .destinationLink {
+    font-size: 14px;
+    transition: transform 0.2s ease, color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+  }
+
+  .destinationLink:hover {
+    transform: scale(1.02);
+    color: #DCAB0F;
+    border-color: #DCAB0F;
+    background-color: rgba(220, 171, 15, 0.05);
+  }
+}
