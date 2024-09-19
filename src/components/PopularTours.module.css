@@ -1,11 +1,14 @@
 .popularTours {
   margin-top: 2rem;
   padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
 }
 
 .title {
-  font-weight: bold;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
+  color: #333;
 }
 
 .toursList {
@@ -18,49 +21,26 @@
   border: 1px solid #e0e0e0;
   border-radius: 4px;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
 }
 
 .tourLink {
   display: flex;
-  align-items: center;
   text-decoration: none;
   color: inherit;
 }
 
-.tourItem:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
 .tourImageContainer {
-  width: 150px;
+  width: 100px;
   height: 100px;
   overflow: hidden;
-  flex-shrink: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f0f0f0;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-
-.tourItem:hover .tourImageContainer {
-  transform: scale(1.05);
+  flex-shrink: 0; /* Prevent the image from shrinking */
 }
 
 .tourImage {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  object-position: center;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-
-.tourItem:hover .tourImage {
-  transform: scale(1.1);
 }
 
 .tourInfo {
@@ -74,7 +54,7 @@
 .tourTitle {
   margin: 0 0 0.5rem 0;
   font-size: 1rem;
-  transition: color 0.3s ease;
+  color: #333;
 }
 
 .tourDestination {
@@ -82,29 +62,38 @@
   align-items: center;
   font-size: 0.9rem;
   color: #666;
-  transition: color 0.3s ease;
 }
 
 .tourDestination svg {
   margin-right: 0.25rem;
 }
 
-.tourDestination span {
-  margin-left: 0.25rem;
+@media (min-width: 769px) {
+  .tourImageContainer {
+    width: 120px; /* Slightly larger for desktop */
+    height: 120px;
+  }
+
+  .tourInfo {
+    padding: 1rem;
+  }
+
+  .tourTitle {
+    font-size: 1.1rem;
+  }
+
+  .tourDestination {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 768px) {
-  .tourItem {
+  .tourLink {
     flex-direction: column;
   }
 
   .tourImageContainer {
     width: 100%;
     height: 150px;
-  }
-
-  .tourInfo {
-    width: 100%;
-    padding: 1rem;
   }
 }

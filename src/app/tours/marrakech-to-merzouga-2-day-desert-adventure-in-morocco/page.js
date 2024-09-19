@@ -11,24 +11,23 @@ import TourEnquiryForm from "@/components/TourEnquiryForm";
 import PopularDestinations from "@/components/PopularDestinations";
 import PopularTours from "@/components/PopularTours";
 
-export default function ThreeDaysSaharaTourMarrakechToFesViaMerzougaMoroccoPage() {
+export default function MarrakechToMerzouga2DayDesertAdventureInMoroccoPage() {
   const [openAccordion, setOpenAccordion] = useState(null);
 
   const toggleAccordion = (index) => {
     setOpenAccordion(openAccordion === index ? null : index);
   };
 
-  const destination =
-    "3 Day Sahara Tour - Marrakech to Fes via Merzouga, Morocco";
+  const destination = "Marrakech to Merzouga 2 Day Desert Adventure in Morocco";
 
-    const destinations = [
-        { name: "Marrakech", slug: "marrakech" },
-        { name: "Casablanca", slug: "casablanca" },
-        { name: "Fes", slug: "fes" },
-        { name: "Chefchaouen", slug: "chefchaouen" },
-        { name: "Sahara Desert", slug: "sahara-desert" },
-        { name: "All tours", slug: "" },
-      ];
+  const destinations = [
+    { name: "Marrakech", slug: "marrakech" },
+    { name: "Casablanca", slug: "casablanca" },
+    { name: "Fes", slug: "fes" },
+    { name: "Chefchaouen", slug: "chefchaouen" },
+    { name: "Sahara Desert", slug: "sahara-desert" },
+    { name: "All tours", slug: "" },
+  ];
 
   const popularTours = [
     {
@@ -54,10 +53,10 @@ export default function ThreeDaysSaharaTourMarrakechToFesViaMerzougaMoroccoPage(
   return (
     <div>
       <TourHero
-        backgroundImage="https://www.escortedmoroccotours.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F7y3hy4cc%2Fproduction%2F2140df7b75f079e56c2fb9a5ccb659fc057a031e-1920x1080.jpg&w=3840&q=75"
+        backgroundImage="http://localhost:8000/api/images/marrakech-to-merzouga-2-day-desert-adventure-in-morocco.webp"
         category="Cultural Tour"
-        title="3 Day Sahara Tour - Marrakech to Fes via Merzouga, Morocco"
-        description="An immersion that takes you through some of the most beautiful and diverse landscapes in Morocco, including the High Atlas Mountains, the stunning Kasbah of Ait Ben Haddou, Ouarzazate the Hollywood of Africa and the breathtaking sand dunes of the Sahara desert Erg Chebbi. "
+        title="Marrakech to Merzouga 2 Day Desert Adventure in Morocco"
+        description="Explore Morocco's rich history and vibrant culture with our 7-day tour. Visit ancient cities, trek the Sahara Desert, and experience local traditions."
       />
 
       <div className={styles.container}>
@@ -65,7 +64,7 @@ export default function ThreeDaysSaharaTourMarrakechToFesViaMerzougaMoroccoPage(
           <div className={styles.column}>
             <div className={styles.imageContainer}>
               <img
-                src="https://i.ibb.co/xzMPdQH/Sahara-desert.jpg"
+                src="http://localhost:8000/api/images/marrakech-to-merzouga-2-day-desert-adventure-in-morocco-Hero-image.jpg"
                 alt="Morocco Tour"
                 className={styles.tourImage}
               />
@@ -79,86 +78,86 @@ export default function ThreeDaysSaharaTourMarrakechToFesViaMerzougaMoroccoPage(
             </div>
 
             <div className={styles.itinerary}>
+              <p>
+                Embark on an exhilarating{" "}
+                <strong>2-day Morocco desert adventure</strong>, traversing the
+                captivating landscapes from <strong>Marrakech</strong> to{" "}
+                <strong>Merzouga Desert</strong>, Morocco. This carefully
+                crafted journey promises an immersive experience, allowing you
+                to delve into the rich cultural tapestry of the region. Begin
+                your expedition in Marrakech, where the vibrant energy of the
+                city sets the stage for the adventure ahead.
+              </p>
               <h3
                 style={{
                   fontWeight: "bold",
                   textDecoration: "underline",
                   textDecorationColor: "gold",
                   textDecorationThickness: "4px",
+                  marginTop: "20px",
                 }}
               >
                 Itinerary
               </h3>
               <Accordion
-                title="Day 1 : Adventure from Marrakech to High Atlas Mountains, Ouarzazate, Roses Valley, and Boumalne Dades"
+                title="Day 1 : Early departure from Marrakech and drive straight to Merzouga Desert "
+                firstState={true}
                 content={
                   <>
                     <p>
-                      We will start our 3 day Sahara Desert tour from{" "}
-                      <strong>Marrakech</strong>
-                      to the High Atlas Mountains, Ouarzazate, and Boumalne
-                      Dades. Witness the majestic landscapes of Tizi n'Tichka
-                      Pass and explore the famous{" "}
-                      <strong>Aït Benhaddou Kasbah</strong>. Passinng through
-                      the charming city of <strong>Ouarzazate</strong>, known as
-                      the gateway to the Sahara Desert of Merzouga. Explore the
-                      city's historical and cultural sites, including the Kasbah
-                      Taourirt and Atlas Film Studio. End our day with a visit
-                      to <strong>Boumalne Dades</strong>, located in the{" "}
-                      <strong>Dades Gorges</strong>. Take a walk along the
-                      gorges and admire the unique rock formations before
-                      spending the night in a traditional riad or guesthouse.
+                      Your adventure kicks off with a scenic drive through the
+                      <strong>Atlas Mountains</strong>, revealing breathtaking
+                      views and picturesque landscapes. En route, visit
+                      traditional Berber villages and witness the authentic way
+                      of life. As you approach the desert, the terrain
+                      transforms, offering a glimpse of the vast and mesmerizing{" "}
+                      <strong>Sahara Desert</strong>.
+                    </p>
+                    <p>
+                      Upon reaching <strong>Merzouga Desert</strong>, the
+                      gateway to the desert, you'll be welcomed by the golden
+                      dunes and the unique charm of the{" "}
+                      <strong>Sahara Desert</strong>. Take part in a camel trek
+                      to witness the sunset over the dunes, casting a warm glow
+                      over the vast desert expanse. The evening brings a
+                      traditional Berber camp experience, complete with a
+                      delicious dinner under the stars and local music to
+                      enhance the desert ambiance.
+                    </p>
+                    <p>
+                      <strong>
+                        Overnight in a Luxury Desert Camp in Merzouga Desert. HB
+                      </strong>
                     </p>
                   </>
                 }
               />
 
               <Accordion
-                title="Day 2 : Heading out towards the Sahara Desert via Tinghir, Todgha Gorges, and Arfoud on the Way to Merzouga."
+                title="Day 2: Leave Merzouga Desert and Drive Back to Marrakech"
                 content={
                   <>
                     <p>
-                      After breakfast, we drive to Tinghir; one of the most
-                      trading positions for the caravans in the past, inside the
-                      old city still the Jewish quarter and cemetery. We then
-                      continue to Todgha Gorges; a 300m canyons towered by
-                      rocks. A short walk inside the canyons before we drive to
-                      Arfoud, the city of dates and fossils. We will reach
-                      Merzouga Sahara Desert before the sunset and a quick stop
-                      in the hotel at the sand dunes where you will switch the
-                      car for the camels. The camel ride to your Desert Camp
-                      will take 1h30 with stops for pictures in the middle of
-                      the dunes. When you arrive the camp, hot shower, and
-                      dinner followed by a traditional music live show around
-                      the fire.
+                      Wake up to the serene beauty of the Sahara Desert as the
+                      sun paints the dunes with hues of gold and orange. After
+                      breakfast, set out to explore more of the desert, with
+                      opportunities for sandboarding and capturing incredible
+                      photos amidst the ever-changing dunes.
                     </p>
                     <p>
-                      Overnight at a <strong>Desert</strong> camp inside the
-                      dunes
-                    </p>
-                  </>
-                }
-              />
-
-              <Accordion
-                title="Day 3: From Sahara Desert to Fes via Ziz Oases, Midelt, Azrou Forest and Ifrane"
-                content={
-                  <>
-                    <p>
-                      Today, you will return to the hotel by camels or a 4x4 car
-                      if you prefer. We will meet in the hotel and drive to
-                      Arfoud city where we change direction toward the Ziz
-                      Oases. A short break in panoramic view of the Oases and we
-                      continue our way toward Midelt where we will stop for
-                      lunch. Then, drive to Azrou Forest where we will visit the
-                      Macaque Barbary Monkeys inside the forest. Next, we move
-                      to Ifrane city nicknamed as a Switzerland of Morocco. A
-                      pet stop in Ifrane before we drive to Fes; one of the
-                      oldest medieval cities in the world. When we arrive.
+                      Bid farewell to <strong>Merzouga Desert</strong> and begin
+                      your return journey to <strong>Marrakech</strong>,
+                      stopping at noteworthy sites along the way. Marvel at the{" "}
+                      <strong>Todra Gorge's</strong> impressive canyon walls and
+                      explore the ancient Kasbah of Ait Ben Haddou, a UNESCO
+                      World Heritage site. As you venture back to Marrakech,
+                      reflect on the unforgettable moments and experiences
+                      gained during this immersive 2-day desert adventure in
+                      Morocco.
                     </p>
                     <p>
-                      we will drop you at your accommodation in{" "}
-                      <strong>Fes</strong>.
+                      Drop off in your accommodation in{" "}
+                      <strong>Marrakech</strong>.
                     </p>
                   </>
                 }

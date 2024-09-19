@@ -21,11 +21,12 @@ export default function SevenDaysAdventureThroughTimeAndCultureMoroccoPage() {
   const destination = "7 Days Adventure through time and Culture Morocco";
 
   const destinations = [
-    "Marrakech",
-    "Casablanca",
-    "Fes",
-    "Chefchaouen",
-    "Sahara Desert",
+    { name: "Marrakech", slug: "marrakech" },
+    { name: "Casablanca", slug: "casablanca" },
+    { name: "Fes", slug: "fes" },
+    { name: "Chefchaouen", slug: "chefchaouen" },
+    { name: "Sahara Desert", slug: "sahara-desert" },
+    { name: "All tours", slug: "" },
   ];
 
   const popularTours = [
@@ -60,7 +61,7 @@ export default function SevenDaysAdventureThroughTimeAndCultureMoroccoPage() {
 
       <div className={styles.container}>
         <div className={styles.mainContent}>
-          <div className={styles.leftColumn}>
+          <div className={styles.column}>
             <div className={styles.imageContainer}>
               <img
                 src="https://i.ibb.co/qFydJ9z/New-Project-2.webp"
@@ -324,10 +325,7 @@ export default function SevenDaysAdventureThroughTimeAndCultureMoroccoPage() {
             </ul>
           </div>
 
-          <div
-            className={styles.rightColumn}
-            style={{ backgroundColor: "#F8F8F8" }}
-          >
+          <div className={`${styles.column} ${styles.rightColumn}`}>
             <TourEnquiryForm tour_id={1} />
             <PopularDestinations destinations={destinations} />
             <PopularTours tours={popularTours} />

@@ -2,12 +2,13 @@
 
 import { useState } from "react";
 import styles from "../ToursEnquiry.module.css";
-import { FaMapMarkerAlt, FaChevronRight } from "react-icons/fa";
-import Link from "next/link";
+import { FaMapMarkerAlt } from "react-icons/fa";
 import CTASection from "@/components/CTASection";
 import TourHero from "@/components/TourHero";
 import Accordion from "@/components/Accordion";
-import axios from "axios";
+import PopularTours from "@/components/PopularTours";
+import PopularDestinations from "@/components/PopularDestinations";
+import TourEnquiryForm from "@/components/TourEnquiryForm";
 
 export default function TwoDaysSaharaDesertTourMarrakechToZagoraMoroccoPage() {
   const [openAccordion, setOpenAccordion] = useState(null);
@@ -19,11 +20,12 @@ export default function TwoDaysSaharaDesertTourMarrakechToZagoraMoroccoPage() {
   const destination = "2 Days Sahara Desert Tour Marrakech to Zagora Morocco";
 
   const destinations = [
-    "Marrakech",
-    "Casablanca",
-    "Fes",
-    "Chefchaouen",
-    "Sahara Desert",
+    { name: "Marrakech", slug: "marrakech" },
+    { name: "Casablanca", slug: "casablanca" },
+    { name: "Fes", slug: "fes" },
+    { name: "Chefchaouen", slug: "chefchaouen" },
+    { name: "Sahara Desert", slug: "sahara-desert" },
+    { name: "All tours", slug: "" },
   ];
 
   const popularTours = [
@@ -55,58 +57,10 @@ export default function TwoDaysSaharaDesertTourMarrakechToZagoraMoroccoPage() {
     message: "",
   });
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    const enquiryData = {
-      tour_id: 1, // Assuming this is the tour ID for this page
-      ...formData,
-      status: "pending",
-    };
-
-    try {
-      const API_ENDPOINT =
-        process.env.NEXT_PUBLIC_API_ENDPOINT ||
-        "http://localhost:8000/api/enquiry-data";
-      const response = await axios.post(API_ENDPOINT, enquiryData, {
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-      });
-
-      // Check if the response is successful
-      if (response.status >= 200 && response.status < 300) {
-        alert("Enquiry sent successfully!");
-        setFormData({
-          name: "",
-          email: "",
-          arrival_date: "",
-          departure_date: "",
-          number_of_travelers: "",
-          message: "",
-        });
-      } else {
-        // Log the response for debugging
-        console.error("Response status:", response.status);
-        alert("Failed to send enquiry. Please try again.");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      alert("An error occurred. Please try again later.");
-    }
-  };
   return (
     <div>
-      <TourHero
+    <TourHero
         backgroundImage="https://www.escortedmoroccotours.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F7y3hy4cc%2Fproduction%2F2140df7b75f079e56c2fb9a5ccb659fc057a031e-1920x1080.jpg&w=3840&q=75"
         category="Cultural Tour"
         title="2 Days Sahara Desert Tour Marrakech to Zagora Morocco"
@@ -115,7 +69,7 @@ export default function TwoDaysSaharaDesertTourMarrakechToZagoraMoroccoPage() {
 
       <div className={styles.container}>
         <div className={styles.mainContent}>
-          <div className={styles.leftColumn}>
+          <div className={styles.column}>
             <div className={styles.imageContainer}>
               <img
                 src="https://i.ibb.co/xzMPdQH/Sahara-desert.jpg"
@@ -198,7 +152,12 @@ export default function TwoDaysSaharaDesertTourMarrakechToZagoraMoroccoPage() {
                 <li>Air-conditioned Vehicle</li>
                 <li>English speaking driver/guide</li>
                 <li>Overnight in a desert camp dinner (HB)</li>
+                <li>
+                  Recommended accommodations for 6 nights: (2 HB and 4 BB)
+                </li>
                 <li>Camel ride</li>
+                <li>Full day guided city tour of Fes</li>
+                <li>Guided visit of the Roman Ruins</li>
               </ul>
             </div>
             <h4 style={{ fontWeight: "bold" }}>Exclusions</h4>
@@ -211,118 +170,16 @@ export default function TwoDaysSaharaDesertTourMarrakechToZagoraMoroccoPage() {
             <ul style={{ listStyleType: "disc", paddingLeft: "30px" }}>
               <li>
                 Our tours are open for further customization,{" "}
-                <a href="http://localhost:3000/tours">contact us </a> to help
+                <a href="http://localhost:3000/contact-us">contact us </a> to help
                 you design your trip{" "}
               </li>
             </ul>
           </div>
 
-          <div
-            className={styles.rightColumn}
-            style={{ backgroundColor: "#F8F8F8" }}
-          >
-            <form className={styles.enquiryForm} onSubmit={handleSubmit}>
-              <h3 style={{ fontWeight: "bold" }}>Request a quote now!</h3>
-              <p className={styles.enquiryParagragh}>
-                Let Us Take You on a Journey Through Time and Culture in Morocco
-              </p>
-              <input
-                type="text"
-                name="name"
-                placeholder="Name"
-                required
-                value={formData.name}
-                onChange={handleInputChange}
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                required
-                value={formData.email}
-                onChange={handleInputChange}
-              />
-              <input
-                type="date"
-                name="arrival_date"
-                placeholder="Arrival Date"
-                required
-                value={formData.arrival_date}
-                onChange={handleInputChange}
-              />
-              <input
-                type="date"
-                name="departure_date"
-                placeholder="Departure Date"
-                required
-                value={formData.departure_date}
-                onChange={handleInputChange}
-              />
-              <input
-                type="number"
-                name="number_of_travelers"
-                placeholder="Number of Travelers"
-                required
-                min="1"
-                value={formData.number_of_travelers}
-                onChange={handleInputChange}
-              />
-              <textarea
-                name="message"
-                placeholder="Your message"
-                required
-                value={formData.message}
-                onChange={handleInputChange}
-              ></textarea>
-
-              <button type="submit">Send Enquiry</button>
-            </form>
-            <div className={styles.destinationsList}>
-              <h3 style={{ fontWeight: "bold" }}>Popular Destinations</h3>
-              <ul>
-                {destinations.map((dest, index) => (
-                  <li key={index} className={styles.destinationItem}>
-                    <a
-                      href={`/destinations/${dest.toLowerCase()}`}
-                      className={styles.destinationLink}
-                    >
-                      <span className={styles.destinationText}>{dest}</span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className={styles.popularTours}>
-              <h3 style={{ fontWeight: "bold" }}>Popular Tours</h3>
-              <ul className={styles.toursList}>
-                {popularTours.map((tour, index) => (
-                  <li key={index} className={styles.tourItem}>
-                    <Link
-                      href={`/tours/${tour.title
-                        .toLowerCase()
-                        .replace(/ /g, "-")}`}
-                      className={styles.tourLink}
-                    >
-                      <div className={styles.tourImageContainer}>
-                        <img
-                          src={tour.image}
-                          alt={tour.title}
-                          className={styles.tourImage}
-                        />
-                      </div>
-                      <div className={styles.tourInfo}>
-                        <h4 className={styles.tourTitle}>{tour.title}</h4>
-                        <p className={styles.tourDestination}>
-                          <FaMapMarkerAlt />
-                          <span>{tour.destination}</span>
-                        </p>
-                      </div>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div className={`${styles.column} ${styles.rightColumn}`}>
+            <TourEnquiryForm tour_id={1} />
+            <PopularDestinations destinations={destinations} />
+            <PopularTours tours={popularTours} />
           </div>
         </div>
       </div>

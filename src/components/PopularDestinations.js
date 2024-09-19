@@ -10,10 +10,10 @@ const PopularDestinations = ({ destinations }) => {
         {destinations.map((dest, index) => (
           <li key={index} className={styles.destinationItem}>
             <Link
-              href={`/destinations/${dest.toLowerCase().replace(/ /g, '-')}`}
+              href={`/destinations/${dest.slug}`}
               className={styles.destinationLink}
             >
-              <span className={styles.destinationText}>{dest}</span>
+              <span className={styles.destinationText}>{dest.name}</span>
             </Link>
           </li>
         ))}

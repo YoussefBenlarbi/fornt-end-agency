@@ -4,8 +4,8 @@ import { useState } from "react";
 import { FaChevronRight } from "react-icons/fa"; // Importing icons
 import styles from "./Accordion.module.css";
 
-export default function Accordion({ title, content }) {
-  const [isOpen, setIsOpen] = useState(false);
+export default function Accordion({ title, content ,firstState }) {
+  const [isOpen, setIsOpen] = useState(firstState || false);
 
   return (
     <div className={styles.accordionItem}>

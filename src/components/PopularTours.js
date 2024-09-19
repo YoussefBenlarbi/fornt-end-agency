@@ -4,6 +4,7 @@ import { FaMapMarkerAlt } from 'react-icons/fa';
 import styles from './PopularTours.module.css';
 
 const PopularTours = ({ tours }) => {
+
   return (
     <div className={styles.popularTours}>
       <h3 className={styles.title}>Popular Tours</h3>
