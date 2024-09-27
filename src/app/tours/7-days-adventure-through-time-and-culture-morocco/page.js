@@ -64,7 +64,7 @@ export default function SevenDaysAdventureThroughTimeAndCultureMoroccoPage() {
           <div className={styles.column}>
             <div className={styles.imageContainer}>
               <img
-                src="https://i.ibb.co/qFydJ9z/New-Project-2.webp"
+                src="/images/7-days-adventure-through-time-and-culture-morocco.jpg"
                 alt="Morocco Tour"
                 className={styles.tourImage}
               />
