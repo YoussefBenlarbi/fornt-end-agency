@@ -7,27 +7,57 @@ export default function CasablancaPage() {
   const tours = [
     {
       id: 1,
-      title: "Sahara Desert Adventure",
-      duration: "3 Days",
-      price: "$299",
+      title: "Ideal Escorted Tour to Marrakesh via Chefchaouen - Fes - Desert",
+      duration: "11 Days",
+      price: "$1199",
       image:
         "https://moroccanexperiencetours.com/wp-content/uploads/2022/07/Destination-Image-10-1-768x519.jpg",
+      link: "11-days-ideal-guided-tour-casablanca-to-marrakech",
     },
     {
       id: 2,
-      title: "Atlas Mountains Trek",
-      duration: "2 Days",
-      price: "$199",
+      title: "7 Days Morocco Desert Tour from Casablanca to Marrakesh",
+      duration: "7 Days",
+      price: "$999",
       image:
-        "https://moroccanexperiencetours.com/wp-content/uploads/2022/07/Destination-Image-10-1-768x519.jpg",
+        "https://moroccanexperiencetours.com/wp-content/uploads/2022/07/Destination-Image-10-1-768x519.jpg.",
+      link: "7-days-morocco-desert-tour-from-casablanca-to-marrakesh",
     },
     {
       id: 3,
-      title: "Medina Food Tour",
-      duration: "1 Day",
-      price: "$79",
+      title: "6 Days Special Morocco Tour from Casablanca",
+      duration: "6 Days",
+      price: "$899",
       image:
         "https://moroccanexperiencetours.com/wp-content/uploads/2022/07/Destination-Image-10-1-768x519.jpg",
+      link: "6-days-special-morocco-tour-from-casablanca",
+    },
+    {
+      id: 4,
+      title: "Supreme Guided Tour - Chefchaouen - Fes - Desert -Essaouira",
+      duration: "13 Days",
+      price: "$1499",
+      image:
+        "https://moroccanexperiencetours.com/wp-content/uploads/2022/07/Destination-Image-10-1-768x519.jpg",
+      link: "13-days-supreme-guided-tour-from-casablanca-morocco",
+    },
+    {
+      id: 5,
+      title: "5 Days Imperial Cities Tour",
+      duration: "5 Days",
+      price: "$799",
+      image:
+        "https://moroccanexperiencetours.com/wp-content/uploads/2022/07/Destination-Image-10-1-768x519.jpg",
+      link: "5-days-moroccan-imperial-tour-from-casablanca-to-fes",
+    },
+    {
+      id: 6,
+      title: "8 Days Desert Tour from Casablanca via Chefchaouen",
+      duration: "8 Days",
+      price: "$1099",
+      image:
+        "https://moroccanexperiencetours.com/wp-content/uploads/2022/07/Destination-Image-10-1-768x519.jpg",
+      link: "8-days-desert-imperial-tour-casablanca-to-marrakesh-morocco",
     },
   ];
 
