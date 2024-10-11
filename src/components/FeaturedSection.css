@@ -163,20 +163,17 @@
 }
 
 .book-now {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  color: #DCAB0F;
+  display: inline-block; /* Allows the link to be centered */
+  margin: 20px auto; /* Centers the link horizontally and adds vertical margin */
+  padding: 10px 20px; /* Adds padding for better clickability */
+  text-align: center; /* Centers the text within the link */
   background-color: transparent;
+  color: #DCAB0F;
   border: 2px solid #DCAB0F;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  text-decoration: none; /* Removes underline */
   transition: all 0.3s ease;
-}
-
-.book-now:hover {
-  color: white;
-  background-color: #DCAB0F;
 }
 
 .book-now:hover {

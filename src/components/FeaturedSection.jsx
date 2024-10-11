@@ -104,7 +104,7 @@ const FeaturedSection = () => {
                     </React.Fragment>
                   ))}
                 </p>
-                <Link href={`/tours/${tour.link}`} passHref>
+                <Link href={`/tours/${tour.link}` } passHref>
                   <span className="book-now">BOOK NOW</span>
                 </Link>
               </div>

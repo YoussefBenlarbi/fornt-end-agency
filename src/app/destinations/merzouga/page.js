@@ -22,7 +22,7 @@ export default function MerzougaPage() {
            
             <div className={styles.destinationContent}>
               <img
-                src="https://lh5.googleusercontent.com/p/AF1QipMCn3SofAFfSfOZzH8UecUpY_C6aSBAJQU8mP-a=w675-h390-n-k-no"
+                src="/images/Sahara_desert.jpg"
                 alt="Merzouga"
                 className={styles.destinationImage}
               />
