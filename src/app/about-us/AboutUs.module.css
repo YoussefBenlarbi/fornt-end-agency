@@ -1,0 +1,396 @@
+.container {
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  margin-top: 0; /* Remove top margin */
+}
+
+/* Add these styles for the breadcrumbs */
+.breadcrumbs {
+  background-color: #f0f0f0;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.breadcrumbsTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.breadcrumbsLinks {
+  font-size: 1rem;
+  color: #666;
+}
+
+.breadcrumbsLinks a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.breadcrumbsLinks a:hover {
+  text-decoration: underline;
+}
+
+.ourValues {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #fff; /* Light gold color (Cornsilk) */
+}
+
+.ourValues h2 {
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  color: #8B4513; /* SaddleBrown - a darker brown to contrast with the light gold */
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.valueItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.valueItem:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.valueIcon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.valueItem h3 {
+  color: white;
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.videoSection {
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-image: url('https://www.escortedmoroccotours.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F7y3hy4cc%2Fproduction%2Fe753493545cb9555c9a65a96b47ed3fa552830f6-1440x540.jpg&w=1920&q=75');
+  background-size: cover;
+  background-position: center;
+}
+
+.videoSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* Adjust the opacity as needed */
+  z-index: 1;
+}
+
+.videoButton {
+  position: relative;
+  z-index: 2;
+  width: 80px;
+  height: 80px;
+  font-size: 40px;
+  background-color: rgba(255, 215, 0, 0.8); /* Golden color with some transparency */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.videoButton:hover {
+  background-color: rgba(218, 165, 32, 0.8); /* Darker gold on hover */
+  transform: scale(1.1);
+}
+
+.videoButton:focus {
+  outline: none;
+}
+
+.videoOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.videoWrapper {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.closeButton {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+.closeButton:hover {
+  transform: scale(1.2);
+}
+
+.ceoSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  border: 2px solid #DCAB0F;
+  margin: 2rem; /* Add margin around the section */
+}
+
+.ceoWords {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.ceoWords h2 {
+  font-size: 2rem;
+  color: #FF8C00; /* Dark Orange */
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.ceoWords p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 20px; /* Add some padding for the quote marks */
+  font-style: italic; /* Make the quote italic */
+}
+
+.ceoWords p:first-of-type::before {
+  content: '"';
+  font-size: 2rem;
+  color: #FF8C00; /* Use the same orange color as other accents */
+  position: absolute;
+  left: 0;
+  top: -5px;
+}
+
+.ceoWords p:first-of-type::after {
+  content: '"';
+  font-size: 2rem;
+  color: #FF8C00;
+  position: absolute;
+  right: 0;
+  bottom: -15px;
+}
+
+.ceoWords p:last-child {
+  font-style: normal; /* Reset italic for the CEO name */
+  color: #777;
+  text-align: right;
+  padding-right: 20px; /* Add padding for alignment with the end quote */
+}
+
+.ceoImage {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ceoImage img {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .ceoSection {
+    flex-direction: column-reverse;
+  }
+
+  .ceoWords, .ceoImage {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 2rem;
+  }
+
+  .ceoImage {
+    justify-content: center;
+  }
+}
+
+.driversSection {
+  padding: 6rem 2rem;
+  background-color: #f9f9f9;
+}
+
+.driversSection h2 {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.driversSection h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #FF8C00;
+  margin: 1rem auto 0;
+}
+
+.driversGrid {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.driverCard {
+  display: flex;
+  align-items: stretch; /* Changed from center to stretch */
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  width: calc(50% - 1rem);
+}
+
+.driverImageContainer {
+  flex: 0 0 40%;
+  position: relative; /* Added */
+  overflow: hidden;
+}
+
+.driverImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute; /* Added */
+  top: 0; /* Added */
+  left: 0; /* Added */
+}
+
+.driverInfo {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.driverInfo h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: bold; /* Make the name bold */
+}
+
+.driverInfo p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  font-style: italic; /* Make the quote italic */
+  position: relative;
+  padding-left: 20px; /* Add some padding for the quote marks */
+}
+
+.driverInfo p::before {
+  content: '"';
+  font-size: 2rem;
+  color: #FF8C00; /* Use the same orange color as other accents */
+  position: absolute;
+  left: 0;
+  top: -5px;
+}
+
+.driverInfo p::after {
+  content: '"';
+  font-size: 2rem;
+  color: #FF8C00;
+  position: absolute;
+  right: 0;
+  bottom: -15px;
+}
+
+@media (max-width: 968px) {
+  .driversGrid {
+    flex-direction: column;
+  }
+
+  .driverCard {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .driverCard {
+    flex-direction: column;
+  }
+
+  .driverImageContainer {
+    width: 100%;
+    height: 300px;
+    position: relative; /* Added */
+  }
+
+  .driverImage {
+    position: absolute; /* Added */
+    top: 0; /* Added */
+    left: 0; /* Added */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .driverInfo {
+    padding: 1.5rem;
+  }
+}
