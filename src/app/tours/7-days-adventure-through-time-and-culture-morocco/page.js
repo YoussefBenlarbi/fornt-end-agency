@@ -53,7 +53,7 @@ export default function SevenDaysAdventureThroughTimeAndCultureMoroccoPage() {
   return (
     <div>
       <TourHero
-        backgroundImage="https://www.escortedmoroccotours.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F7y3hy4cc%2Fproduction%2F7c4e46bcc25badefb3ffc5f7e1d76b35639a07c7-1920x1080.jpg&w=3840&q=75"
+        backgroundImage="/images/7-days-adventure-through-time-and-culture-morocco.webp"
         category="Cultural Tour"
         title="7 Days Adventure through time and Culture Morocco"
         description="Explore Morocco's rich history and vibrant culture with our 7-day tour. Visit ancient cities, trek the Sahara Desert, and experience local traditions."
@@ -64,7 +64,7 @@ export default function SevenDaysAdventureThroughTimeAndCultureMoroccoPage() {
           <div className={styles.column}>
             <div className={styles.imageContainer}>
               <img
-                src="/images/7-days-adventure-through-time-and-culture-morocco.jpg"
+                src="/images/7-days-adventure-through-time-and-culture-morocco-hero-image.jpg"
                 alt="Morocco Tour"
                 className={styles.tourImage}
               />

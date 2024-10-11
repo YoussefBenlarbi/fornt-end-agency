@@ -2,15 +2,59 @@ import React from "react";
 import { MdAccessTime } from "react-icons/md";
 import CityLink from "./CityLink";
 import "./FeaturedSection.css";
+import Link from "next/link";
+import ClientSideImage from "./ClientSideImage";
 
 const FeaturedSection = () => {
   const featuredTours = [
-    { id: 1, title: "Bustling Cities", itinerary: ["Marrakech", "Fez"] },
-    { id: 2, title: "Sahara Desert", itinerary: ["Merzouga", "Zagora"] },
-    { id: 3, title: "Atlas Mountains", itinerary: ["Toubkal", "Imlil"] },
-    { id: 4, title: "Coastal Escapes", itinerary: ["Essaouira", "Agadir"] },
-    { id: 5, title: "Historical Sites", itinerary: ["Volubilis", "Chefchaouen"] },
-    { id: 6, title: "Local Cuisine", itinerary: ["Casablanca", "Rabat"] },
+    {
+      id: 1,
+      image:
+        "/images/7-days-adventure-through-time-and-culture-morocco-hero-image.jpg",
+      title: "7 Days Adventure through time and Culture Morocco",
+      itinerary: ["Marrakech", "Fez"],
+      link: "7-days-adventure-through-time-and-culture-morocco",
+    },
+    {
+      id: 2,
+      image:
+        "/images/2-days-sahara-desert-tour-marrakech-to-zagora-morocco-hero-image.jpg",
+      title: "2 Days Sahara Desert Tour from Marrakech to Zagora",
+      itinerary: ["Merzouga", "Zagora"],
+      link: "2-days-sahara-desert-tour-marrakech-to-zagora-morocco",
+    },
+    {
+      id: 3,
+      image:
+        "/images/3-days-sahara-tour-marrakech-to-fes-via-merzouga-morocco-hero-image.jpg",
+      title: "3 Day Sahara Desert Tour From Marrakech to Fes",
+      itinerary: ["Toubkal", "Imlil"],
+      link: "3-days-sahara-tour-marrakech-to-fes-via-merzouga-morocco",
+    },
+    {
+      id: 4,
+      image:
+        "/images/3-day-2-night-camp-adventure-from-fes-to-marrakech-hero-image.jpg",
+      title: "3 Days - 2 Overnight camp experience from Fes to Marrakech",
+      itinerary: ["Essaouira", "Agadir"],
+      link: "3-day-2-night-camp-adventure-from-fes-to-marrakech",
+    },
+    {
+      id: 5,
+      image:
+        "/images/2-days-sahara-desert-tour-marrakech-to-zagora-morocco-hero-image.jpg",
+      title: "2 Days Sahara Desert Tour from Marrakech to Zagora",
+      itinerary: ["Marrakech", "Atlas Mountains", "Zagora"],
+      link: "2-days-sahara-desert-tour-marrakech-to-zagora-morocco",
+    },
+    {
+      id: 6,
+      image:
+        "/images/7-days-adventure-through-time-and-culture-morocco-hero-image.jpg",
+      title: "Local Cuisine",
+      itinerary: ["Casablanca", "Rabat"],
+      link: "",
+    },
   ];
 
   return (
@@ -31,10 +75,12 @@ const FeaturedSection = () => {
                   <MdAccessTime className="tour-card-icon" />
                   <span className="tour-card-duration">3 Days 4 Nights</span>
                 </div>
-                <img
-                  src="https://moroccanexperiencetours.com/wp-content/uploads/2022/07/Destination-Image-10-1-768x519.jpg"
+                <ClientSideImage       src={tour.image}
+                  alt={tour.title} className={""}/>
+                {/* <img
+                  src={tour.image}
                   alt={tour.title}
-                />
+                /> */}
               </div>
               <div className="tour-info">
                 <h4>{tour.title}</h4>
@@ -58,7 +104,9 @@ const FeaturedSection = () => {
                     </React.Fragment>
                   ))}
                 </p>
-                <button className="book-now">BOOK NOW</button>
+                <Link href={`/tours/${tour.link}`} passHref>
+                  <span className="book-now">BOOK NOW</span>
+                </Link>
               </div>
             </div>
           ))}

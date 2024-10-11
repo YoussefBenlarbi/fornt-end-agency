@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import DestinationCard from './DestinationCard';
 import './DestinationSection.css';
 
@@ -22,12 +23,15 @@ const DestinationSection = () => {
         </p>
         <div className="destination-grid">
           {destinations.map((destination) => (
-            <DestinationCard
-              key={destination.id}
-              name={destination.name}
-              image={destination.image}
-              tours={destination.tours}
-            />
+            <Link key={destination.id} href={`/destinations/${destination.name.toLowerCase()}`}>
+        
+                <DestinationCard
+                  name={destination.name}
+                  image={destination.image}
+                  tours={destination.tours}
+                />
+              
+            </Link>
           ))}
         </div>
       </div>

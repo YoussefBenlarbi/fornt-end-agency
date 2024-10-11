@@ -61,7 +61,7 @@ export default function TwoDaysSaharaDesertTourMarrakechToZagoraMoroccoPage() {
   return (
     <div>
     <TourHero
-        backgroundImage="https://www.escortedmoroccotours.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F7y3hy4cc%2Fproduction%2F2140df7b75f079e56c2fb9a5ccb659fc057a031e-1920x1080.jpg&w=3840&q=75"
+        backgroundImage="/images/2-days-sahara-desert-tour-marrakech-to-zagora-morocco.webp"
         category="Cultural Tour"
         title="2 Days Sahara Desert Tour Marrakech to Zagora Morocco"
         description="A 2 days Morocco desert tour is a brief but exciting adventure that takes you through the stunning landscapes of the High Atlas Mountains to Daraa Valley towards the Sahara desert of Zagora. Stoping by Ait Ben-Haddou and Ouarzazate the cinema city, and experiencing traditional Berber culture, and Explore ancient berber villages, ride camels through the dunes, watch a breathtaking sunset and spend a night in a traditional nomadic tent under the starry sky."
@@ -72,7 +72,7 @@ export default function TwoDaysSaharaDesertTourMarrakechToZagoraMoroccoPage() {
           <div className={styles.column}>
             <div className={styles.imageContainer}>
               <img
-                src="https://i.ibb.co/xzMPdQH/Sahara-desert.jpg"
+                src="/images/2-days-sahara-desert-tour-marrakech-to-zagora-morocco-hero-image.jpg"
                 alt="Morocco Tour"
                 className={styles.tourImage}
               />

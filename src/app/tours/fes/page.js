@@ -74,7 +74,7 @@ export default function FesPage() {
       image: "/images/5-days-morocco-desert-tour-from-fes-to-marrakesh-morocco-hero-image.jpg",
       itinerary: ["Fes", "Merzouga", "Todra Gorge", "Ouarzazate", "Marrakech"],
       startingLocation: "Fes",
-      link: "5-days-morocco-desert-tour"
+      link: "5-days-morocco-desert-tour-from-fes-to-marrakesh-morocco"
     },
     {
       id: 8,
@@ -84,7 +84,7 @@ export default function FesPage() {
       image: "/images/discover-morocco-2-day-fes-to-fes-merzouga-desert-adventure-hero-image.jpg",
       itinerary: ["Fes", "Merzouga Desert", "Fes"],
       startingLocation: "Fes",
-      link: "discover-morocco-2-day-fes-to-merzouga-desert-adventure"
+      link: "discover-morocco-2-day-fes-to-fes-merzouga-desert-adventure"
     },
     {
       id: 9,
