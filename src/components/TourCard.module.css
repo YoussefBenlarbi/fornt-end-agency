@@ -1,0 +1,148 @@
+.tourCard {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 20px;
+}
+
+.tourCard:hover {
+  transform: translateY(-5px);
+}
+
+.tourImageContainer {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.tourImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tourDuration {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.tourInfo {
+  padding: 20px;
+}
+
+.startsFrom {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.startingLocationLink {
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.startingLocationLink:hover {
+  color: #ffa500;
+}
+
+.tourTitle {
+  font-size: 1.3rem;
+  margin: 0 0 20px 0;
+  color: #333;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.tourLocation {
+  display: flex;
+  align-items: flex-start;
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+  line-height: 1.4;
+}
+
+.locationIcon {
+  margin-right: 8px;
+  color: #ffa500;
+  font-size: 1rem;
+  margin-top: 2px;
+}
+
+.destinationsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.destinationLink {
+  color: #333;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+  margin-right: 5px;
+}
+
+.destinationLink::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #ffa500;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+.destinationLink:hover {
+  color: #ffa500;
+}
+
+.destinationLink:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.bookNowBtn {
+  background-color: #ffa500;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.bookNowBtn:hover {
+  background-color: #ff8c00;
+  transform: translateY(-2px);
+}
+
+.bookNowBtn:active {
+  transform: translateY(0);
+}
+
+.tourPrice {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffa500; /* Changed to a gold/orange color */
+  margin-bottom: 10px;
+}

@@ -1,0 +1,32 @@
+.cityLink {
+  color: #333;
+  text-decoration: none;
+  font-weight: normal;
+  position: relative;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.cityLink::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #DCAB0F;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.cityLink:hover,
+.cityLink.hovered {
+  color: #DCAB0F;
+  font-weight: bold;
+}
+
+.cityLink:hover::after,
+.cityLink.hovered::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

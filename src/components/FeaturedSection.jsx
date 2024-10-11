@@ -1,15 +1,16 @@
 import React from "react";
 import { MdAccessTime } from "react-icons/md";
+import CityLink from "./CityLink";
 import "./FeaturedSection.css";
 
 const FeaturedSection = () => {
   const featuredTours = [
-    { id: 1, title: "Bustling Cities", location: "Marrakech, Fez" },
-    { id: 2, title: "Sahara Desert", location: "Merzouga, Zagora" },
-    { id: 3, title: "Atlas Mountains", location: "Toubkal, Imlil" },
-    { id: 4, title: "Coastal Escapes", location: "Essaouira, Agadir" },
-    { id: 5, title: "Historical Sites", location: "Volubilis, Chefchaouen" },
-    { id: 6, title: "Local Cuisine", location: "Casablanca, Rabat" },
+    { id: 1, title: "Bustling Cities", itinerary: ["Marrakech", "Fez"] },
+    { id: 2, title: "Sahara Desert", itinerary: ["Merzouga", "Zagora"] },
+    { id: 3, title: "Atlas Mountains", itinerary: ["Toubkal", "Imlil"] },
+    { id: 4, title: "Coastal Escapes", itinerary: ["Essaouira", "Agadir"] },
+    { id: 5, title: "Historical Sites", itinerary: ["Volubilis", "Chefchaouen"] },
+    { id: 6, title: "Local Cuisine", itinerary: ["Casablanca", "Rabat"] },
   ];
 
   return (
@@ -50,7 +51,12 @@ const FeaturedSection = () => {
                       clipRule="evenodd"
                     />
                   </svg>
-                  {tour.location}
+                  {tour.itinerary.map((city, index, array) => (
+                    <React.Fragment key={city}>
+                      <CityLink city={city} />
+                      {index < array.length - 1 && ", "}
+                    </React.Fragment>
+                  ))}
                 </p>
                 <button className="book-now">BOOK NOW</button>
               </div>
