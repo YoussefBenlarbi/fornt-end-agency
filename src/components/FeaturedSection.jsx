@@ -14,6 +14,7 @@ const FeaturedSection = () => {
       title: "7 Days Adventure through time and Culture Morocco",
       itinerary: ["Marrakech", "Fez"],
       link: "7-days-adventure-through-time-and-culture-morocco",
+      duration: "7 Days 6 Nights"
     },
     {
       id: 2,
@@ -22,6 +23,7 @@ const FeaturedSection = () => {
       title: "2 Days Sahara Desert Tour from Marrakech to Zagora",
       itinerary: ["Merzouga", "Zagora"],
       link: "2-days-sahara-desert-tour-marrakech-to-zagora-morocco",
+      duration: "2 Days 1 Night"
     },
     {
       id: 3,
@@ -30,6 +32,7 @@ const FeaturedSection = () => {
       title: "3 Day Sahara Desert Tour From Marrakech to Fes",
       itinerary: ["Toubkal", "Imlil"],
       link: "3-days-sahara-tour-marrakech-to-fes-via-merzouga-morocco",
+      duration: "3 Days 2 Nights"
     },
     {
       id: 4,
@@ -38,6 +41,7 @@ const FeaturedSection = () => {
       title: "3 Days - 2 Overnight camp experience from Fes to Marrakech",
       itinerary: ["Essaouira", "Agadir"],
       link: "3-day-2-night-camp-adventure-from-fes-to-marrakech",
+      duration: "3 Days 2 Nights"
     },
     {
       id: 5,
@@ -46,6 +50,7 @@ const FeaturedSection = () => {
       title: "2 Days Sahara Desert Tour from Marrakech to Zagora",
       itinerary: ["Marrakech", "Atlas Mountains", "Zagora"],
       link: "2-days-sahara-desert-tour-marrakech-to-zagora-morocco",
+      duration: "2 Days 1 Night"
     },
     {
       id: 6,
@@ -54,6 +59,7 @@ const FeaturedSection = () => {
       title: "Local Cuisine",
       itinerary: ["Casablanca", "Rabat"],
       link: "",
+      duration: "1 Day"
     },
   ];
 
@@ -73,7 +79,7 @@ const FeaturedSection = () => {
               <div className="tour-card-image-container">
                 <div className="tour-card-tag">
                   <MdAccessTime className="tour-card-icon" />
-                  <span className="tour-card-duration">3 Days 4 Nights</span>
+                  <span className="tour-card-duration">{tour.duration}</span>
                 </div>
                 <ClientSideImage       src={tour.image}
                   alt={tour.title} className={""}/>
